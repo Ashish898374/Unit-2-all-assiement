@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+       h1{
+        text-align: center;
+        color: rgb(30, 189, 189)
+      }
+      #cal{
+        width: 30%;
+        height: 550px;
+        margin: auto;
+        position: fixed;
+        margin-left: 530px;
+        
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      #display{
+          font-size: 30px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+      }
+     #cal>div:first-child{
+       width: 70%;
+       height: 60px;
+       margin: auto;
+       margin-top: 30px;
+       border-radius: 10px;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+       
+     }
+     #cal>div:nth-child(2){
+        width: 70%;
+        height: 400px;
+        margin: auto;
+        margin-top: 40px;
+      }
+      #cal>div>div{
+        width: 90%;
+       height: 75px;
+       margin: auto;
+       margin-top: 20px;
+       border-radius: 10px;
+       display: flex;
+      }
+      #cal>div+div>div>div{
+        width: 70%;
+       height: 60px;
+       margin: auto;
+       margin-top: 30px;
+       border-radius: 10px;
+       margin: auto;
+       margin:2%;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      p{
+        text-align: center;
+        font-size:30px;
+        margin-top: 12px;
+        font-weight: bolder;
+      }
+      #chol{
+        background-color: red;
+        color: white;
+      }
+      .mol{
+        background-color: black;
+        color: white;
+      }
+
+     
+ </style>
+ 
+</head>
+<body>
+    <h1> Masai Calculator</h1>
+  
+    
+    <div id="cal">
+      <div id="display"></div>
+      <div>
+        <div>
+          <div><p>1</p></div>
+          <div><p>2</p></div>
+          <div><p>3</p></div>
+          <div class="mol"><p>+</p></div>
+        </div>
+        <div>
+          <div><p>4</p></div>
+          <div><p>5</p></div>
+          <div><p>6</p></div>
+          <div  class="mol"><p>-</p></div>
+
+        </div>
+        <div>
+          <div><p>7</p></div>
+          <div><p>8</p></div>
+          <div><p>9</p></div>
+          <div  class="mol"><p>*</p></div>
+        </div>
+        <div>
+          <div id="chol"><p>C</p></div>
+          <div><p>0</p></div>
+          <div  class="mol"><p>=</p></div>
+          <div  class="mol"><p>/</p></div>
+        </div>
+      </div>
+    </div>
+    
+
+</body>
+</html>
+<script> 
+     let  key=document.querySelectorAll("#cal>div");
+     let bag=""
+     for (let i=0;i<key.length;i++){
+         key[i].addEventListener("click",mycalculator)
+     }
+     function mycalculator(even){
+         let y=targetNumber=even.target.innerText
+       
+         if (targetNumber=="C"){
+            bag=""
+            document.querySelector("#display").innerText=""
+
+         }
+         else if (targetNumber == "="){
+            document.querySelector("#display").innerText=eval(bag);
+         }
+         else{
+            bag+= targetNumber
+        document.querySelector("#display").innerText=bag
+
+         }
+        
+        
+     }
+    </script>

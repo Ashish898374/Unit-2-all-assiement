@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+    #main{
+        gap: 20px;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div id="main"> 
+    
+    <input id="nam" type="text" placeholder="enter name"/>
+    <input id="ag" type="number" placeholder="enter age"/>
+    <select id="gen">
+        <option>  male
+</option>
+<option> femail</option>
+</select>
+<input id="mob" type="number" placeholder="enter mobile number"/> <br> <br>
+<input id="ema" type="text" placeholder="enter email"/> 
+<button>submit</button>
+
+
+<h1> </h1>
+<h2> </h2>
+<h3> </h3>
+<h4> </h4>
+<h5> </h5>
+</div>
+</body>
+</html>
+<script> 
+document.querySelector("button").addEventListener("click",functionMe)
+function  functionMe(){
+    var num=document.querySelector("#nam").value;
+     var sum=document.querySelector("#ag").value;
+     var ph=document.querySelector("#mob").value;
+     var bmn=document.querySelector("#ema").value;
+     var show=document.querySelector("#gen").value;
+
+     document.querySelector("h1").innerText=num;
+     document.querySelector("h2").innerText=sum;
+     document.querySelector("h3").innerText=show;
+     document.querySelector("h4").innerText=ph;
+     document.querySelector("h5").innerText=bmn;
+    
+
+}
+
+</script>

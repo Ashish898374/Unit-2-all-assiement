@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    
+    div{
+        /* border: 1px solid red; */
+        width: 50%;
+        height: 650px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    div input{
+        font-size: 30px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    #sub{
+        margin-left: 185px;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 20px;
+        height: 40px;
+    }
+    #name{
+        font-size: 20px;
+        height: 40px;
+        width: 51%;
+        /* text-align: center; */
+        /* margin: auto; */
+        margin-left: 180px;
+    }
+    #email{
+        /* text-align: center; */
+        margin-left: 180px;
+        font-size: 20px;
+        height: 40px;
+        width: 51%;
+        /* background-color: grey; */
+    }
+    div>p{
+        margin-left: 180px;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    div>h3{
+        color: grey;
+        text-align: center;
+    }
+    #pass{
+        margin-left: 180px;
+        font-size: 20px;
+        height: 40px;
+        width: 51%;
+
+    }
+    #term{
+        font-size: 20px;
+    }
+    a{
+       text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <form>
+        <h1> masai</h1>
+        <div> 
+            <h1> Sing up</h1>
+        <p>Full name</p>
+        <input type="text" placeholder="enter name" id="name"/>
+        <br> <br> 
+        <p>Email</p>
+        <input type="text" placeholder="enter email" id="email"/>
+        <br> <br>
+        <p>password</p>
+        <input type="password" placeholder="enter password" id="pass" />
+        <br> <br>
+        <p id="term" >By signing up i accept the masai school <a href="">  Terms of service</a> <br>and acknowledge the<a href="">  privacy policy. </a> </p>
+        <br> <br>
+        <input id="sub" type="submit" value="Singup"/>
+        <br> <br>
+        <h3> Alredy have an account? <a href="https://sso.masaischool.com/signup/"> sing In</a> </h3>>
+    </form>
+</div>
+    
+</body>
+</html>
+<script> 
+document.querySelector("form").addEventListener("Singup",myFunction);
+function myFunction(){
+    localStorage.setItem("function",)
+}
+
+
+</script>

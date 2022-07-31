@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    #novo{
+        width: 70%;
+        height: 50px;
+        border: 1px solid red;
+        margin: auto;
+        background-color: yellow;
+        font-size: 20px;
+    }
+    
+    #novo h1{
+        padding: 20px;
+        margin-top: -23px;
+    }
+    #von{
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,100px);
+        gap: 20px;
+        grid-template-areas: 
+        "a a b "
+        "a a c"
+        "a a d" ;
+        margin: auto;
+    }
+    #von>div{
+        margin-top: 20px;
+    }
+    #von>div:nth-child(1){
+        background-color: blue;
+        color: aqua;
+        padding-left: 20px;
+        padding-top: 10px;
+        grid-area: a;
+    }
+    #von>div:nth-child(2){
+        background-color:brown;
+        color: aqua;
+        padding-left: 20px;
+        padding-top: 10px;
+        grid-area: b;
+    }
+    #von>div:nth-child(3){
+        background-color:chartreuse;
+        color: aqua;
+        padding-left: 20px;
+        padding-top: 10px;
+        grid-area: c;
+    }
+    #von>div:nth-child(4){
+        background-color:chartreuse;
+        color: aqua;
+        padding-left: 20px;
+        padding-top: 10px;
+        grid-area: d;
+    }
+    @media all and (min-width:482px) and (max-width:720px){
+        #von{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,100px);
+            gap: 5px;
+            grid-template-areas: 
+            "a a a"
+            "a a a"
+            "b c d";
+        }
+        #novo{
+            width: 60%;
+            height: 50px;
+            background-color: yellow;
+            font-size: 20px;
+            margin: auto;
+        }
+    }
+    @media all and (min-width:240px) and (max-width:479px){
+        #von{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(5,100px);
+            gap: 5px;
+            grid-template-areas: 
+            "a"
+            "a"
+            "b"
+            "c"
+            "d";
+
+        }
+        #novo{
+            width: 60%;
+            height: 50px;
+            background-color: yellow;
+            font-size: 15px;
+            margin: auto;
+
+        }
+    }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="novo"> <h1> Navigation</h1>
+
+    </div> 
+    <div id="von">
+        <div> LEFT BOX</div>
+        <div> RIGHT BOX 1</div>
+        <div> RIGHT BOX 2</div>
+        <div> RIGHT BOX 3</div>  
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="one" type="number" placeholder="enter 1st number"/>
+    <input id="two" type="number" placeholder="enter 2nd number"/> 
+    <button onclick="getDta()"> Add</button>
+    <button onclick="getData()">Subtraction</button>
+    <button onclick="getDeta()"> Division</button>
+    <button onclick="getDate()"> Multipication</button>
+</body>
+</html>
+<script> 
+function getDta(){
+    var y=document.getElementById("one").value;
+    var x=document.getElementById("two").value;
+    var num=(+y)+(+x)
+    alert(num)
+}
+function getData(){
+    var a=document.getElementById("one").value;
+    var b=document.getElementById("two").value;
+    var plush=(a)-(b)
+    alert(plush)
+}
+function getDeta(){
+    var c=document.getElementById("one").value;
+    var v=document.getElementById("two").value;
+    var plush=(c)/(v)
+    alert(plush)
+}
+function getDate(){
+    var y=document.getElementById("one").value;
+    var x=document.getElementById("two").value;
+    var plush=(y)*(x)
+    alert(plush)
+}
+
+
+</script>

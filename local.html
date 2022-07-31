@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    button{
+        margin-left: 40px;
+        font-size: 30px;
+        border-radius: 5px;
+        
+    }
+    
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script> 
+// var colors=["blue","grey","gree","red","yellow","skyblue","white","black","white"];
+let arr= [ {name:"primary",color:"white",bgColor: "blue" },
+{name:"secondry",color:"white",bgColor:"grey"},
+{name:"success",color:"white",bgColor:"green"},
+{name:"Danger",color:"white",bgColor:"red"},
+{name:"Warning",color:"white",bgColor:"yellow"},
+{name:"info",color:"white",bgColor:"skyblue"},
+{name:"Light",color:"black",bgColor:"white"},
+{name:"Dark",color:"white",bgColor:"black"},
+{name:"Link",color:"blue",bgColor:"white"},
+];
+for (let i=0;i<arr.length;i++){
+    let bt=document.createElement("button");
+    bt.innerText=arr[i].name;
+    bt.style.backgroundColor=arr[i].bgColor;
+    bt.style.color=arr[i].color
+    document.querySelector("body").append(bt);
+}
+
+
+</script> 

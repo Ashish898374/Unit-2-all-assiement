@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="name" type="text" placeholder="enter name"/>
+        <input id="age" type="number" placeholder="enter age"/>
+        <select id="gender">
+            <option value="male"> male</option>
+            <option value="female">female</option>
+        </select>
+        <input type="submit"/>
+     <h1> </h1>
+     <h2></h2>
+     <h3></h3>
+    </form>
+</body>
+</html>
+<script>
+let arr=[] 
+document.querySelector("form").addEventListener("submit",getData)
+function getData(event){
+      event.preventDefault();
+      let  obj1={
+          name:document.querySelector("#name").value,
+          age:document.querySelector("#age").value,
+          gender: document.querySelector("#gender").value,
+
+      };
+    
+      arr.push(obj1)
+      console.log(arr);
+      arr.forEach(function(ele){
+      document.querySelector("h1").innerText=ele.name;
+      document.querySelector("h2").innerText=ele.age;
+      document.querySelector("h3").innerText=ele.gender;
+      
+})
+}
+</script>

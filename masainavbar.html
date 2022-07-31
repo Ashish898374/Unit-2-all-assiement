@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+       #nav{
+           width: 100%;
+           height: 60px;
+           /* border: 1px solid  red; */
+           display: flex;
+           justify-content: space-evenly;
+       }
+       #nav > div:first-child{
+           width: 10%;
+           /* border:1px solid green; */
+           height:100%;
+       }
+       #nav > div:last-child{
+           width: 70%;
+           height:100%;
+        /* border: 1px solid orange; */
+        display: flex;  
+        justify-content:space-around;     
+
+    }
+    #nav > div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    p+div{
+        display: flex;
+        background-color: #f2fdff;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    p+img{
+        width: 20%;
+        height: 15%;
+        margin-left: 10px;
+
+    }
+    select{
+        border: 0px;
+    }
+         
+    </style>
+</head>
+<body>
+    <div id="nav"> 
+        <div>  <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="masai"/>  </div>
+        <div> <select> 
+            <option value=""> course</option>
+            <option value=""> FSd</option>
+            <option value=""> android</option>
+            <option value=""> Data Analysis</option>
+            
+        </select>
+            <p> fess & isa</p>
+            <p> about & us</p>
+            <p> hire from us</p>
+            <p> faq</p>
+            <p> events</p>
+            <div> <p> refers earn</p> <img src="https://www.masaischool.com/img/referral/hand.png"/>   </div> 
+            <button> Login</button>
+
+
+         </div> </div>
+    
+</body>
+</html>
