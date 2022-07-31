@@ -1,0 +1,76 @@
++<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    <form action="" id="form">
+      <h2>Enter Your Application Details</h2>
+      <input placeholder="Enter Name" id="name" name="name" type="text" />
+      <input placeholder="Enter email" type="email" name="email" id="email" />
+      <select name="role" id="role">
+        <option value="FSD">FSD</option>
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+      </select>
+      <input id="salary"
+        type="number"
+        placeholder="Enter expected salary in lakhs per annum "
+      />
+      <input id="submit" type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    //you need to code here
+    document.querySelector("form").addEventListener("submit",loanFunction)
+    function loanFunction(){
+      //document.querySelector("body").innerText=""
+    event.preventDefault();
+    let obj1=JSON.parse(localStorage.getItem("jobTitle"))||[];
+    
+
+    let condtion={
+      names:form.name.value,
+      emails:form.email.value,
+      salarys:form.salary.value,
+    }
+    if (condtion.names==""){
+        //  alert("fill the name")
+        swal("please fill the details!", "...and go to bookmark page!");
+    }
+    else if(condtion.emails==""){
+      swal("enter your emails !", "...and next procces!");
+    }
+    else if (condtion.salarys==""){
+      swal("enter your previouse salary !", "...and next procces!");
+    }
+    else {
+      // alert("succesfully")
+      swal("Next steps click the ok !", "...and go to bookmark page!");
+      window.location.href="applied.html"
+              
+    }
+    let obj={
+      personame:document.querySelector("#name").value,
+      personemail:document.querySelector("#email").value,
+      personrole:document.querySelector("#role").value,
+      personsalary:document.querySelector("#salary").value,
+    };
+    obj1.push(obj);
+    console.log(obj1);
+    localStorage.setItem("jobTitle",JSON.stringify(obj1));
+  }
+    
+  </script>
+</html>
