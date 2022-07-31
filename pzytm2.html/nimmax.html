@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contenair{
+            width: 40%;
+            height:auto;
+            border: 1px solid;
+            margin: auto;
+        }
+        #minmax{
+            display: flex;
+            gap: 100px;
+        }
+        #minmax>div{
+            display: grid;
+            justify-content: center;
+            align-content:center ;
+            font-weight: bolder;
+            font-size: 40px;
+            width: 30%;
+            height: 150px;
+            border:1px solid ;
+            margin: auto;
+        }
+        .Re{
+            background-color:rgb(254,0,0) ;
+        }
+        .gr{
+            background-color:rgb(0,170,1) ;
+        }
+        #h2{
+            display: flex;
+           justify-content: space-around;
+        }
+        #h2>h2+h2{
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+        #h2>h2{
+            margin-top: 10px;
+        }
+        #display{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            width: 40%;
+            height: 100px;
+            border: 1px solid ;
+            margin: auto;
+            background-color: rgb(179,179,179);
+            
+        }
+        h2{
+           text-align: center;
+           margin-top: -10px;
+           
+        }
+        #keyboard{
+            display: grid;
+            grid-template-columns:repeat(3,10%);
+            grid-template-rows: repeat(4,50px);
+            gap: 20px;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            padding-top: 30px;
+           
+        }
+        #keyboard>div{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            border: 1px solid red;
+            border: none;
+        }
+        #btn{
+            display: grid;
+            margin: auto;
+            width: 35%;
+           height:50px ;
+           justify-content: center;
+           align-content: center;
+           margin-top: 20px;
+           margin-bottom: 20px;
+        }
+        .M{
+           background-color: rgb(255,102,0); 
+        }
+        .N{
+            background-color: rgb(102,129,0);
+        }
+       .o{
+           background-color: rgb(129,0,101);
+       }
+       #btn{
+           background-color: rgb(0,0,0);
+           color: white;
+       }
+    
+        
+    </style>
+</head>
+<body>
+<div id="contenair">
+    <div id="minmax">
+        <div class="Re">43</div>
+        <div class="gr">2019</div>
+        
+    </div>
+    <div id="h2">
+    <h2>MIN</h2>
+    <h2>MAX</h2>
+</div>
+    <h2>SCORE</h2>
+    <div id="display"></div>
+    <div id="keyboard">
+        <div class="N">1</div>
+        <div class="M">2</div>
+        <div class="N">3</div>
+        <div class="M">4</div>
+        <div class="M">5</div>
+        <div class="M">6</div>
+        <div class="N">7</div>
+        <div class="M">8</div>
+        <div class="N">9</div>
+        <div></div>
+        <div class="o">0</div>
+    </div>
+    <button id="btn">ENTER</button>
+</div>
+</body>
+</html>
+<script>
+   var keyboard=document.querySelectorAll("#keyboard>div");
+   var bag="";
+   for(var i=0;i<keyboard.length;i++)
+   {
+       keyboard[i].addEventListener("click",displaynumber);
+       
+   }
+
+   function displaynumber(){
+   var targetvalue=event.target.innerText;
+   bag+=targetvalue
+   document.querySelector("#display").innerText=(bag);
+   
+}
+
+document.querySelector("#btn").addEventListener("click",myfun)
+
+
+function myfun(){
+    
+ var dis=document.querySelector("#display").innerText;
+var min=document.querySelector(".Re").innerText;
+var max=document.querySelector(".gr").innerText;
+var disp=Number(dis)
+var Min=Number(min);
+var Max=Number(max)
+
+
+if(disp<Min)
+{
+    document.querySelector(".Re").innerText=disp;
+  
+}
+else if(disp>Max)
+{
+    document.querySelector(".gr").innerText=disp;
+    
+}
+
+}
+
+
+</script>
